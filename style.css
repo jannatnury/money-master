@@ -1,4 +1,31 @@
-/* Google fonts Family; */
+/* Universal Styles */
+*{ 
+    /* Google fonts Family; */
+    font-family: 'Lora', serif;
+}
+
+/* Header Styles */
 #title{
+    /* Google fonts Family; */
     font-family: 'Shizuru', cursive;
 }
+#title{
+    color: rgb(252, 148, 30);
+}
+#title:hover{
+    color: darkgreen;
+}
+/* Header Style ends */
+/* Calculation Styles here */
+#button{
+    color: whitesmoke;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(6, 145, 238);
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+}
+
+

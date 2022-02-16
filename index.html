@@ -20,20 +20,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
+    <!-- Google Fonts Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="container my-4">
-        <h1 id="title" class="text-center text-dark fw-bolder">Fokirer Bank<i class="fa-solid fa-face-grin-tears"></i></h1>
+        <h1 id="title" class="text-center fw-bolder">Fokirer Bank<i class="fa-solid fa-face-grin-tears"></i>
+        </h1>
         <p><i class="fa-solid fa-face-grin-tears"></i></p>
     </header>
     <main class="container">
-        <div class="row bg-info">
+        <div class="row justify-content-between">
             <div class="col-6">
-                <img src="images/bank3.png" alt="">
+                <img class="img-fluid" src="images/bank3.png" alt="">
+            </div>
+            <div class="col-5 bg-light">
+                <h3 class="text-center fw-bolder">Income</h3>
+                <p>Income: <input type="text"></p>
+                <h3 class="text-center fw-bolder">Expenses</h3>
+                <p>Food: <input id="foodInput" type="text"></p>
+                <p>Rent: <input id="rentInput"  type="text"></p>
+                <p>Clothes: <input id="clothsInput"  type="text"></p>
+                <button id="button" class="p-2 fw-bolder" type="submit">Calculate</button>
+                <p class="text-center fw-bolder">Total Expenses:<span> 5500 </span></p>
+                <p class="text-center fw-bolder">Balance:<span> 4500 </span></p>
+                <p class="text-center fw-bolder">Saving Amount::<span> 2000</span></p>
+                <p class="text-center fw-bolder">Remaining Balance: <span>2500</span></p>
             </div>
         </div>
-
+        <script src="js/calculation.js"></script>
     </main>
 
 </body>
