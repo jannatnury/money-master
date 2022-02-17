@@ -18,10 +18,9 @@ function expansesCalculation() {
     document.getElementById('foodInput').value = '';
     document.getElementById('rentInput').value = '';
     document.getElementById('clothsInput').value = '';
-    // Erroe message
-    if (isNaN(totalIncome) || totalIncome < 0 || isNaN(foodExpance) || foodExpance < 0 || isNaN(rentExpance) || rentExpance < 0 || isNaN(clothsExpance) || clothsExpance < 0 || isNaN(lastBalance) || lastBalance > totalIncome) {
+    // Error message
+    if (isNaN(totalIncome) || totalIncome < 0 || isNaN(foodExpance) || foodExpance < 0 || isNaN(rentExpance) || rentExpance < 0 || isNaN(clothsExpance) || clothsExpance < 0) {
         document.getElementById('expanceTotal').innerText = "Invalid Input !";
-        document.getElementById('remainingTotal').innerText = "Invalid Input !";
     }
     if (expanceTotal > totalIncome) {
         document.getElementById('expanceTotal').innerText = "You can't expanse more than income!";
@@ -40,11 +39,19 @@ function savingsCalculation() {
     const savingsParcent = document.getElementById('savingInput').value;
     const totalSavings = (getExpanses('income') * savingsParcent) / 100;
     // Total savings
-    if (totalSavings > 0)
-        document.getElementById('savingAmount').innerText = totalSavings;
-    document.getElementById('remainingBalance').innerText = expansesCalculation() - totalSavings;
-}
+    document.getElementById('savingAmount').innerText = totalSavings;
+    const previousBalance = parseFloat(document.getElementById('remainingTotal').innerText);
+    if (previousBalance < totalSavings) {
+        const remainingBalanceValue = document.getElementById('remainingBalance');
+        remainingBalanceValue.innerText = "Invalied";
+    }
+    else {
+        const newRemainingBalance = previousBalance - totalSavings;
+        const remainingBalanceValue = document.getElementById('remainingBalance');
+        remainingBalanceValue.innerText = newRemainingBalance;
+    }
 
+}
 
 // add eventListner on calculation button
 document.getElementById('button').addEventListener('click', function () {
