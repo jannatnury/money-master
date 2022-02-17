@@ -1,16 +1,28 @@
-function calculation(num1,num2,num3){
-    const foodExpance=document.getElementById('foodInput');
-    let foodExpanceValue = foodExpance.value;
-    foodExpance.value = parseFloat(foodExpanceValue);
+function getExpanses(sector) {
 
-    const rentExpance=document.getElementById('rentInput');
-    let rentExpanceValue = rentExpance.value;
-    rentExpance.value = parseFloat(rentExpanceValue);
-
-    const clothsExpance=document.getElementById('clothsInput');
-    let clothsExpanceValue = clothsExpance.value;
-    clothsExpance.value = parseFloat(clothsExpanceValue);
+    const sectorInput = document.getElementById(sector + 'Input').value;
+    let sectorExpance = parseFloat(sectorInput);
+    return sectorExpance;
 }
-document.getElementById('button').addEventListener('click', function(){
+function expansesCalculation() {
+    const totalIncome = getExpanses('income');
+    const foodExpance = getExpanses('food');
+    const rentExpance = getExpanses('rent');
+    const clothsExpance = getExpanses('cloths');
+    const expanceTotal = foodExpance + rentExpance + clothsExpance;
+    document.getElementById('expanceTotal').innerText = expanceTotal;
+    document.getElementById('remainingTotal').innerText = totalIncome - expanceTotal;
+
+    // function for empty input values
+    document.getElementById('foodInput').value = '';
+    document.getElementById('rentInput').value = '';
+    document.getElementById('clothsInput').value = '';
+
+}
+
+// add eventListner on button
+document.getElementById('button').addEventListener('click', function () {
+    expansesCalculation();
+    console.log('button clicked');
 
 });

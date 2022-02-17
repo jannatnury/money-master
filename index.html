@@ -10,9 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Bootstrap CDN ends here -->
-    <!-- Fontawesome kit -->
-    <script src="https://kit.fontawesome.com/3796080522.js" crossorigin="anonymous"></script>
-    <!-- Fontawesome kit ends here -->
     <!-- Css Style link below -->
     <link rel="stylesheet" href="style.css">
     <!-- Ends of Css Style link -->
@@ -28,27 +25,43 @@
 
 <body>
     <header class="container my-4">
-        <h1 id="title" class="text-center fw-bolder">Fokirer Bank<i class="fa-solid fa-face-grin-tears"></i>
-        </h1>
-        <p><i class="fa-solid fa-face-grin-tears"></i></p>
+        <h1 id="title" class="text-center fw-bolder">Fokirer Bank</h1>
     </header>
     <main class="container">
         <div class="row justify-content-between">
             <div class="col-6">
                 <img class="img-fluid" src="images/bank3.png" alt="">
             </div>
-            <div class="col-5 bg-light">
+            <div class="col-5 bg-warning">
                 <h3 class="text-center fw-bolder">Income</h3>
-                <p>Income: <input type="text"></p>
+                <div class="row px-5 my-2 justify-content-between">
+                    <label class="d-block col-5 text-end" for="incomeInput">Income: </label> <input
+                        class="d-block col-6" id="incomeInput" type="text">
+                </div>
                 <h3 class="text-center fw-bolder">Expenses</h3>
-                <p>Food: <input id="foodInput" type="text"></p>
-                <p>Rent: <input id="rentInput"  type="text"></p>
-                <p>Clothes: <input id="clothsInput"  type="text"></p>
-                <button id="button" class="p-2 fw-bolder" type="submit">Calculate</button>
-                <p class="text-center fw-bolder">Total Expenses:<span> 5500 </span></p>
-                <p class="text-center fw-bolder">Balance:<span> 4500 </span></p>
-                <p class="text-center fw-bolder">Saving Amount::<span> 2000</span></p>
-                <p class="text-center fw-bolder">Remaining Balance: <span>2500</span></p>
+                <div class="row px-5 my-2 justify-content-between">
+                    <label class="d-block col-5 text-end" for="foodInput">Food: </label> <input class="d-block col-6"
+                        id="foodInput" type="text">
+                </div>
+                <div class="row px-5 my-2 justify-content-between">
+                    <label class="d-block col-5 text-end" for="rentInput">Rent: </label> <input class="d-block col-6"
+                        id="rentInput" type="text">
+                </div>
+                <div class="row px-5 my-2 justify-content-between">
+                    <label class="d-block col-5 text-end" for="clothsInput">Clothes: </label> <input
+                        class="d-block col-6" id="clothsInput" type="text">
+                </div>
+                <button id="button" class="p-2 fw-bolder d-block w-25 mx-auto">Calculate</button>
+                <p class="text-center fw-bolder">Total Expenses:<span id="expanceTotal"> 00 </span></p>
+                <p class="text-center fw-bolder">Balance:<span id="remainingTotal"> 00 </span></p>
+                <div class="input-group mb-3 w-75 mx-auto justify-content-center">
+                    <label class="d-block col-5 text-end" for="clothsInput">Save: </label> <input type="text"
+                        class="form-control">
+                    <span class="input-group-text">%</span>
+                    <button>Save</button>
+                </div>
+                <p class="text-center fw-bolder">Saving Amount:<span> 00</span></p>
+                <p class="text-center fw-bolder">Remaining Balance: <span> 00</span></p>
             </div>
         </div>
         <script src="js/calculation.js"></script>
