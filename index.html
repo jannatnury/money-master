@@ -25,14 +25,14 @@
 
 <body>
     <header class="container my-4">
-        <h1 id="title" class="text-center fw-bolder">Fokirer Bank</h1>
+        <h1 id="title" class="text-center fw-bolder">My Tiny Bank</h1>
     </header>
     <main class="container">
-        <div class="row justify-content-between">
-            <div class="col-6">
+        <div class="row justify-content-between gy-5">
+            <div class="col-12 order-first  col-lg-7">
                 <img class="img-fluid" src="images/bank3.png" alt="">
             </div>
-            <div class="col-5 bg-warning">
+            <div class="col-12 order-last col-lg-4 bg-warning">
                 <h3 class="text-center fw-bolder">Income</h3>
                 <div class="row px-5 my-2 justify-content-between">
                     <label class="d-block col-5 text-end" for="incomeInput">Income: </label> <input
@@ -54,13 +54,12 @@
                 <button id="button" class="p-2 fw-bolder d-block w-25 mx-auto">Calculate</button>
                 <p class="text-center fw-bolder">Total Expenses:<span id="expanceTotal"> 00 </span></p>
                 <p class="text-center fw-bolder">Balance:<span id="remainingTotal"> 00 </span></p>
-                <div class="input-group mb-3 w-75 mx-auto justify-content-center">
-                    <label class="d-block col-5 text-end" for="clothsInput">Save: </label> <input type="text"
-                        class="form-control">
-                    <span class="input-group-text">%</span>
-                    <button>Save</button>
+                <div class="d-flex justify-content-center align-items-center">
+                    <label for="SavingInput">Save: </label><input id="savingInput" type="text" class="w-25 mx-2">
+                    <p class="fw-bolder me-2 align-items-center">%</p>
+                    <button id="button-2" class="p-1">Save</button>
                 </div>
-                <p class="text-center fw-bolder">Saving Amount:<span> 00</span></p>
+                <p id="savings" class="text-center fw-bolder">Saving Amount:<span id="savingAmount"> 00</span></p>
                 <p class="text-center fw-bolder">Remaining Balance: <span> 00</span></p>
             </div>
         </div>
