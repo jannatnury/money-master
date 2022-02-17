@@ -3,17 +3,15 @@
     /* Google fonts Family; */
     font-family: 'Lora', serif;
 }
+/* universal styles ends  */
 
 /* Header Styles */
 #title{
-    /* Google fonts Family; */
-    font-family: 'Shizuru', cursive;
-}
-#title{
-    color: rgb(252, 148, 30);
+    color:cadetblue;
 }
 #title:hover{
     color: darkgreen;
+    text-decoration: underline;
 }
 /* Header Style ends */
 /* Calculation Styles here */
@@ -21,7 +19,14 @@
     color: whitesmoke;
     border: none;
     border-radius: 15px;
-    background-color: rgb(6, 145, 238);
+    background-color: rgb(6, 145, 238) ;
+}
+
+/* main section styles here */
+/* calculator styles */
+#calculator{
+    background-color: rgb(241, 237, 237) ;
+    border-radius: 15px;
 }
 #button-2{
     color: whitesmoke;

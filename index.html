@@ -13,10 +13,6 @@
     <!-- Css Style link below -->
     <link rel="stylesheet" href="style.css">
     <!-- Ends of Css Style link -->
-    <!-- Google Fonts Shizuru -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
     <!-- Google Fonts Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,15 +21,18 @@
 
 <body>
     <header class="container my-4">
-        <h1 id="title" class="text-center fw-bolder">My Tiny Bank</h1>
+        <h1 id="title" class="text-center fw-bolder">My Little Bank</h1>
     </header>
+    <!-- main part -->
     <main class="container">
+        <!-- Calculator image here -->
         <div class="row justify-content-between gy-5">
             <div class="col-12 order-first  col-lg-7">
                 <img class="img-fluid" src="images/bank3.png" alt="">
             </div>
+            <!-- Calculation part here -->
             <div class="col-12 order-last col-lg-4 d-flex flex-column align-items-center justify-content-center">
-                <div class="bg-info p-4">
+                <div id="calculator" class="p-4">
                     <h3 class="text-center fw-bolder">Income</h3>
                     <div class="row px-5 my-2 justify-content-between">
                         <label class="d-block col-5 text-end" for="incomeInput">Income: </label> <input
@@ -52,7 +51,7 @@
                         <label class="d-block col-5 text-end" for="clothsInput">Clothes: </label> <input
                             class="d-block col-6" id="clothsInput" type="text">
                     </div>
-                    <button id="button" class="p-2 fw-bolder d-block w-25 mx-auto">Calculate</button>
+                    <button id="button" class="p-2 fw-bolder d-block w-50 mx-auto">Calculate</button>
                     <p class="text-center fw-bolder">Total Expenses:<span id="expanceTotal"> 00 </span></p>
                     <p class="text-center fw-bolder">Balance:<span id="remainingTotal"> 00 </span></p>
                     <div class="d-flex justify-content-center align-items-center">
